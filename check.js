@@ -11,7 +11,8 @@ baseList.forEach(space => {
     const fileName = space.replace('en/', '')
 
     const langFilePath = `${lang}/${fileName}`
-    const langFile = fs.existsSync(langFilePath) ? require(`./${langFilePath}`) : {}
+    const newFile = !fs.existsSync(langFilePath)
+    const langFile = !newFile ? require(`./${langFilePath}`) : {}
 
     const add = Object.keys(base).filter(k => !langFile[k])
     const remove = Object.keys(langFile).filter(k => !base[k])
@@ -24,6 +25,9 @@ baseList.forEach(space => {
       delete langFile[k]
     })
 
-    if (add.length > 0 || remove.length > 0) fs.writeJsonSync(langFilePath, langFile, { spaces: 2 })
+    if (add.length > 0 || remove.length > 0) {
+      if (newFile) fs.ensureFileSync(langFilePath)
+      fs.writeJsonSync(langFilePath, langFile, { spaces: 2 })
+    }
   })
 })
