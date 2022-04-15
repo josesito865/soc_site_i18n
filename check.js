@@ -1,6 +1,6 @@
 const fs = require('fs-extra')
 const glob = require('glob')
-const path = require('path')
+// const path = require('path')
 
 const langs = require('./langs.json')
 
@@ -24,6 +24,6 @@ baseList.forEach(space => {
       delete langFile[k]
     })
 
-    if (add.length > 0 || remove.length > 0) fs.writeJsonSync(path.join(lang, fileName), langFile, { spaces: 2 })
+    if (add.length > 0 || remove.length > 0) fs.writeJsonSync(langFilePath, langFile, { spaces: 2 })
   })
 })
