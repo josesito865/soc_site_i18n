@@ -1,0 +1,35 @@
+name: Automatic Check
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - uses: fregante/setup-git-user@v1
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+          cache: 'yarn'
+
+      - name: Install dependencies
+        run: |
+          yarn install --production --pure-lockfile    
+
+      - name: Run automatic check
+        run: |
+          node check.js
+
+      - name: Push from main to dist branch.
+        run: |
+          git add -A
+          git diff-index --quiet HEAD || git commit -m 'Deploy ${{ github.sha }}'
+          git push 
