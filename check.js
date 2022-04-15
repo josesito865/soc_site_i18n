@@ -1,6 +1,5 @@
 const fs = require('fs-extra')
 const glob = require('glob')
-// const path = require('path')
 
 const langs = require('./langs.json')
 
@@ -12,20 +11,26 @@ baseList.forEach(space => {
 
     const langFilePath = `${lang}/${fileName}`
     const newFile = !fs.existsSync(langFilePath)
-    const langFile = !newFile ? require(`./${langFilePath}`) : {}
+    const langFile = newFile ? {} : require(`./${langFilePath}`)
 
-    const add = Object.keys(base).filter(k => !langFile[k])
-    const remove = Object.keys(langFile).filter(k => !base[k])
+    let add = false
+    let remove = false
 
-    add.forEach(k => {
-      langFile[k] = base[k]
+    Object.keys(base).forEach(k => {
+      if (!langFile[k]) {
+        add = true
+        langFile[k] = base[k]
+      }
     })
 
-    remove.forEach(k => {
-      delete langFile[k]
+    Object.keys(langFile).forEach(k => {
+      if (!base[k]) {
+        remove = true
+        delete langFile[k]
+      }
     })
 
-    if (add.length > 0 || remove.length > 0) {
+    if (add || remove) {
       if (newFile) fs.ensureFileSync(langFilePath)
       fs.writeJsonSync(langFilePath, langFile, { spaces: 2 })
     }

@@ -26,6 +26,7 @@ jobs:
 
       - name: Run automatic check
         run: |
+          node defaults.js
           node check.js
 
       - name: Push from main to dist branch.
