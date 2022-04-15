@@ -9,7 +9,9 @@ baseList.forEach(space => {
   langs.forEach(lang => {
     const base = require(`./${space}`)
     const fileName = space.replace('en/', '')
-    const langFile = require(`./${lang}/${fileName}`)
+
+    const langFilePath = `./${lang}/${fileName}`
+    const langFile = fs.existsSync(langFilePath) ? require(`./${lang}/${fileName}`) : {}
 
     const add = Object.keys(base).filter(k => !langFile[k])
     const remove = Object.keys(langFile).filter(k => !base[k])
