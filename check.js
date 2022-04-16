@@ -3,13 +3,13 @@ const glob = require('glob')
 
 const langs = require('./langs.json')
 
-const baseList = glob.sync('en/**.json')
+const baseList = glob.sync('langs/en/**.json')
 baseList.forEach(space => {
   langs.forEach(lang => {
     const base = require(`./${space}`)
-    const fileName = space.replace('en/', '')
+    const fileName = space.replace('langs/en/', '')
 
-    const langFilePath = `${lang}/${fileName}`
+    const langFilePath = `langs/${lang}/${fileName}`
     const newFile = !fs.existsSync(langFilePath)
     const langFile = newFile ? {} : require(`./${langFilePath}`)
 

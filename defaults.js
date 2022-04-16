@@ -8,7 +8,7 @@ Object.keys(defaults).forEach(fileName => {
     data[k] = k
   })
 
-  const langFilePath = `en/${fileName}.json`
+  const langFilePath = `langs/en/${fileName}.json`
   fs.ensureFileSync(langFilePath)
   fs.writeJsonSync(langFilePath, data, { spaces: 2 })
 })
