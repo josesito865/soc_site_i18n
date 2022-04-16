@@ -38,6 +38,7 @@ jobs:
       - name: Run bundle script
         run: |
           node bundle.js
+          cp .gitignore build/.gitignore
 
       - name: Push bundle to dist branch
         uses: s0/git-publish-subdir-action@develop
