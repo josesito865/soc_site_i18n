@@ -1,21 +1,33 @@
 {
   "common":[
     "Last Added",
+    "Last Added_header",
     "Last Releases",
+    "More last added",
+
     "Home",
     "Albums",
     "Album List",
     "Games",
-    "Animations",
+    "Animation",
     "Contact",
     "Album Admin",
     "Manage Users",
+    "Profile",
+    "Login",
+    "Logout",
+    "Register",
+
     "Series",
     "Publishers",
     "Platforms",
     "Game List",
+    "More game releases",
+
     "Animation List",
     "Studios",
+    "More animation releases",
+
     "Get Lucky",
     "Random Pull",
     "Soundtrack Count",

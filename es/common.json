@@ -1,22 +1,36 @@
 {
   "Last Added": "Agregados Recientemente",
-  "Last Releases": "Lanzamientos Recientes",
-  "Album List": "Album List",
-  "Games": "Games",
-  "Animations": "Animations",
-  "Contact": "Contact",
-  "Album Admin": "Album Admin",
-  "Manage Users": "Manage Users",
+  "Last Releases": "Nuevos Lanzamientos",
+  "Last Added_header": "Recientes",
+  "More last added": "Más álbumes recientes",
+
+  "Home": "Inicio",
+  "Albums": "Álbumes",
+  "Album List": "Lista de álbumes",
+
+  "Games": "Videojuegos",
+  "Animation": "Animación",
+  "Contact": "Contacto",
+  "Album Admin": "Admin Album",
+  "Manage Users": "Admin Usuarios",
+  "Profile": "Perfil",
+  "Login": "Iniciar sesión",
+  "Logout": "Cerrar sesión",
+
   "Series": "Series",
-  "Publishers": "Publishers",
-  "Platforms": "Platforms",
-  "Game List": "Game List",
-  "Animation List": "Animation List",
-  "Studios": "Studios",
+  "Publishers": "Editores",
+  "Platforms": "Plataformas",
+  "Game List": "Lista de juegos",
+  "More game releases": "Más álbumes de videojuegos",
+
+  "Animation List": "Lista de animaciones",
+  "Studios": "Estudios",
+  "More animation releases": "Más álbumes de animación",
+
   "Get Lucky": "Get Lucky",
   "Random Pull": "Random Pull",
-  "Soundtrack Count": "Soundtrack Count",
-  "Highlight Soundtrack": "Highlight Soundtrack",
-  "Home": "Home",
-  "Albums": "Albums"
+  "Soundtrack Count": "Álbumes Totales",
+  "Animation Soundtracks": "Álbumes de animación",
+  "Game Soundtracks": "Álbumes de videojuegos",
+  "Highlight Soundtrack": "Álbum Destacado"
 }

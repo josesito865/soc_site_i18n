@@ -1,12 +1,13 @@
 {
   "Last Added": "Last Added",
+  "Last Added_header": "Last Added",
   "Last Releases": "Last Releases",
 
   "Home": "Home",
   "Albums": "Albums",
   "Album List": "Album List",
   "Games": "Games",
-  "Animations": "Animations",
+  "Animation": "Animation",
   "Contact": "Contact",
   "Album Admin": "Album Admin",
   "Manage Users": "Manage Users",
