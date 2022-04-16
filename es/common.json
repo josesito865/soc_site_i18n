@@ -3,11 +3,9 @@
   "Last Releases": "Nuevos Lanzamientos",
   "Last Added_header": "Recientes",
   "More last added": "Más álbumes recientes",
-
   "Home": "Inicio",
   "Albums": "Álbumes",
   "Album List": "Lista de álbumes",
-
   "Games": "Videojuegos",
   "Animation": "Animación",
   "Contact": "Contacto",
@@ -16,21 +14,17 @@
   "Profile": "Perfil",
   "Login": "Iniciar sesión",
   "Logout": "Cerrar sesión",
-
   "Series": "Series",
   "Publishers": "Editores",
   "Platforms": "Plataformas",
   "Game List": "Lista de juegos",
   "More game releases": "Más álbumes de videojuegos",
-
   "Animation List": "Lista de animaciones",
   "Studios": "Estudios",
   "More animation releases": "Más álbumes de animación",
-
   "Get Lucky": "Get Lucky",
   "Random Pull": "Random Pull",
   "Soundtrack Count": "Álbumes Totales",
-  "Animation Soundtracks": "Álbumes de animación",
-  "Game Soundtracks": "Álbumes de videojuegos",
-  "Highlight Soundtrack": "Álbum Destacado"
+  "Highlight Soundtrack": "Álbum Destacado",
+  "Register": "Register"
 }
