@@ -12,5 +12,8 @@ baseList.forEach(space => {
   bundle[lang][name] = require(`./${space}`)
 })
 
-fs.ensureFileSync('build/index.json')
-fs.writeJsonSync('build/index.json', bundle)
+Object.keys(bundle).forEach(lang => {
+  fs.ensureFileSync(`build/${lang}.json`)
+  fs.writeJsonSync(`build/${lang}.json`, bundle[lang])
+})
+
